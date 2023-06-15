@@ -1,3 +1,4 @@
+
 import { VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import QuestionListItem from "./QuestionListItem";
@@ -16,6 +17,7 @@ const QuestionListing = () => {
     >
       {questions.map((question) => question)}
     </VStack>
+
   );
 };
 
