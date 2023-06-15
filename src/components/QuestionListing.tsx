@@ -1,4 +1,3 @@
-
 import { VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import QuestionListItem from "./QuestionListItem";
@@ -8,8 +7,8 @@ const QuestionListing = () => {
   const [questions, setQuestions] = useState(questionsArr);
   return (
     <VStack
-    h={'100vh'}
-    marginInline="auto"
+      maxH={"calc(100vh - 10rem)"}
+      marginInline="auto"
       justifyContent={"center"}
       alignItems={"center"}
       gap="1rem"
@@ -17,7 +16,6 @@ const QuestionListing = () => {
     >
       {questions.map((question) => question)}
     </VStack>
-
   );
 };
 
