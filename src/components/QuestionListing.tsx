@@ -1,11 +1,23 @@
-import { Box, Text } from "@chakra-ui/react";
-import React from "react";
+
+import { VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
+import QuestionListItem from "./QuestionListItem";
 
 const QuestionListing = () => {
+  const questionsArr = new Array(10).fill(<QuestionListItem />);
+  const [questions, setQuestions] = useState(questionsArr);
   return (
-    <Box>
-      <Text>Product Listing</Text>
-    </Box>
+    <VStack
+    h={'100vh'}
+    marginInline="auto"
+      justifyContent={"center"}
+      alignItems={"center"}
+      gap="1rem"
+      maxW={"60vw"}
+    >
+      {questions.map((question) => question)}
+    </VStack>
+
   );
 };
 
