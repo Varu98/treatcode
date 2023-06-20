@@ -2,17 +2,42 @@ import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import { AiOutlineFileDone } from "react-icons/ai";
 
-const QuestionListItem = () => {
+interface Problem {
+  acceptance: string;
+  description: string;
+  difficulty: string;
+  exampleIn: string;
+  exampleOut: string;
+  problemId: string;
+  title: string;
+}
+
+type Props = {
+  problem: Problem;
+};
+
+const QuestionListItem = ({ problem }: Props) => {
+  const {
+    acceptance,
+    description,
+    difficulty,
+    exampleIn,
+    exampleOut,
+    problemId,
+    title,
+  } = problem;
   return (
-    <Flex justifyContent={"center"} gap={"1rem"} alignItems={"center"}>
-      <Box as="span">1.</Box>
-      <Box as="span">Add Two Numbers</Box>
+    <Flex w={"full"} gap={"1rem"} alignItems={"center"}>
+      <Box as="span">{problemId}</Box>
+      <Box flexBasis={"60%"} as="span">
+        {title}
+      </Box>
       <Box as="span" color={"purple.500"}>
         <AiOutlineFileDone />
       </Box>
-      <Box as="span">92%</Box>
-      <Box color={"yellow.500"} as="span">
-        Medium
+      <Box minW={'5rem'} as="span">{acceptance}</Box>
+      <Box minW={'5rem'} color={"yellow.500"} as="span">
+        {difficulty}
       </Box>
       <Box as="span">Frequency</Box>
     </Flex>

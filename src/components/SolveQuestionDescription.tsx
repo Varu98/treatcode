@@ -1,5 +1,4 @@
 import { Badge, Box, GridItem, HStack, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 
 const SolveQuestionDescription = () => {
   return (
