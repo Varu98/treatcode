@@ -7,7 +7,6 @@ import QuestionListing from "./components/QuestionListing";
 export const App = () => (
   <ChakraProvider theme={theme}>
     <HStack p={4} maxH={"4rem"} justifyContent={"end"}>
-      {/* Add comment */}
       <ColorModeSwitcher />
     </HStack>
     <QuestionListing />
